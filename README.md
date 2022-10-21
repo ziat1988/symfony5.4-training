@@ -16,3 +16,5 @@ from pg_indexes
 where tablename not like 'pg%';
 
 ```
+## Optimization Image
+- Use LiipImage (Yohan dev)

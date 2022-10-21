@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GalleryController!{% endblock %}
+
+{% block body %}
+    <main>
+        <h2>My gallery</h2>
+        <div class="container-gallery">
+            <img src="{{ asset('media/test-photo.jpg') }}" alt="photo" />
+        </div>
+    </main>
+
+{% endblock %}
