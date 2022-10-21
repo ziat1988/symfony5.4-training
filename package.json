@@ -1,0 +1,12 @@
+{
+  "name": "symfony-session-redis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ziat1988/symfony5.4-training.git",
+  "author": "dang <trinhdangnhat@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@hotwired/stimulus": "^3.0.0",
+    "@symfony/ux-lazy-image": "file:vendor/symfony/ux-lazy-image/Resources/assets"
+  }
+}
