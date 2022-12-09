@@ -1,6 +1,6 @@
-
-.container{
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .counter{
     margin-top: 30px;
@@ -12,7 +12,16 @@
 
 }
 
-img{
+.gallery{
+    position: relative;
     width: 100%;
-    height: auto;
+}
+
+.gallery a {
+    position: absolute;
+    background-image: linear-gradient( 135deg, #F761A1 10%, #AC46C8 100%);
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: block;
 }

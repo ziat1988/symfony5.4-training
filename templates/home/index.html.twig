@@ -4,21 +4,41 @@
 
 {% block body %}
 
-<div class="container">
-    <div data-controller="hello">
-        <input data-hello-target="name" type="text">
+    <div class="container">
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+        <div class="wrapper-photo">
 
-        <button data-action="click->hello#greet">
-            Greet
-        </button>
 
-        <span data-hello-target="output"></span>
+            <div>
+                <img
+                        src="{{ data_uri_thumbnail('media/2.jpg', 100, 75) }}"
+                        {{ stimulus_controller('symfony/ux-lazy-image/lazy-image', {
+                            src: asset('media/2.jpg') | imagine_filter('my_relative')
+                        }) }}
 
-        <div class="counter">
-            <button data-action="click->hello#increment">Click to add</button>
-            <div data-hello-target="count">0</div>
+                        width="200"
+                        height="266.94"
+                        alt=""/>
+            </div>
+
+            <div>
+                <img
+                        src="{{ data_uri_thumbnail('media/8.jpg', 100, 75) }}"
+                        {{ stimulus_controller('symfony/ux-lazy-image/lazy-image', {
+                            src: asset('media/8.jpg') | imagine_filter('my_relative')
+                        }) }}
+
+                        width="200"
+                        height="306.77"
+                        alt=""/>
+            </div>
+
+        </div>
+        <div class="wrapper-text py-4">
+            Hey this is a good PHP ever !!!
         </div>
 
     </div>
-</div>
 {% endblock %}

@@ -5,8 +5,39 @@
 {% block body %}
     <main>
         <h2>My gallery</h2>
-        <div class="container-gallery">
-            <img src="{{ asset('media/test-photo.jpg') }}" alt="photo" />
+
+{#        <div class="textbox">#}
+{#            <input type="text" />#}
+{#        </div>#}
+
+
+        <div class="gallery" data-controller="gallery">
+{#            <a#}
+{#                    href="{{ asset('media/test-photo.jpg') |imagine_filter('full')}}"#}
+{#                    data-controller="gallery"#}
+{#                    data-action="click->gallery#full"#}
+{#                    >#}
+{#                <img src="{{ asset('media/test-photo.jpg') | imagine_filter('my_relative') }}" alt="photo" />#}
+{#            </a>#}
+
+
+            {% for i in 1..10 %}
+            <a
+                    href="{{ asset('media/'~i~'.jpg') |imagine_filter('full')}}"
+
+                    data-action="click->gallery#full"
+
+            >
+                <img src="{{ asset('media/'~i~'.jpg') | imagine_filter('my_relative') }}" alt="photo" />
+            </a>
+            {% endfor %}
+
+        </div>
+
+
+        <div data-controller="gallery">
+            <div data-gallery-target="output">0</div>
+            <button data-action="click->gallery#increase">Add</button>
         </div>
     </main>
 
