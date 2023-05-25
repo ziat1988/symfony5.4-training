@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page accueil{% endblock %}
+
+{% block body %}
+    <div>
+        <img src="{{ asset('images/background.jpg')|imagine_filter('my_miniature') }}" alt="photo">
+
+    </div>
+{% endblock %}

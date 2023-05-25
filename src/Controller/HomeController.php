@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,10 +22,18 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="app_index")
      */
-    public function index(): Response
+    public function index(Filesystem $fs): Response
     {
-        phpinfo();
-        die();
-        return new Response(1);
+
+        return $this->render('index.html.twig');
     }
+
+    /**
+     * @Route("/test", name="app_test")
+     */
+    public function test()
+    {
+        dd('why');
+    }
+
 }
